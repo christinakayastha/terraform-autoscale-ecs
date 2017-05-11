@@ -26,6 +26,16 @@ variable "lb_port" {
   description = "port to listen to"
 }
 
+variable "target_group_port" {
+  description = "port target group listens on"
+  default = 80
+}
+
+variable "target_group_protocol" {
+  description = "protocol used to communicate from target group"
+  default = "HTTP"
+}
+
 variable "container_memory_reservation" {
   default     = 512
   description = "The soft limit (in MiB) of memory to reserve for the container. When system memory is under contention, Docker attempts to keep the container memory to this soft limit; however, your container can consume more memory when it needs to"

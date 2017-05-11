@@ -2,8 +2,8 @@
 
 resource "aws_alb_target_group" "grp" {
   name                 = "${var.task_name}-${var.environment}"
-  port                 = "${var.lb_port}"
-  protocol             = "${var.protocol}"
+  port                 = "${var.target_group_port}"
+  protocol             = "${var.target_group_protocol}"
   vpc_id               = "${var.vpc_id}"
   deregistration_delay = "${var.deregistration_delay}"
 
